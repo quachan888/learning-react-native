@@ -1,15 +1,16 @@
 import { StyleSheet, View, Text } from 'react-native';
 import React, { useState } from 'react';
 import Focus from './src/features/focus/Focus';
-import TouchableTest from './src/LearningRN/TouchableTest';
+import ButtonTest from './src/LearningRN/ButtonTest';
 
 export default function App() {
-    const [focusSubject, setFocusSubject] = useState('aaa');
+    const [focusSubject, setFocusSubject] = useState(null);
 
     return (
         <View style={styles.container}>
-            {/* <Focus /> */}
-            <TouchableTest />
+            {/* <Focus addSubject={setFocusSubject} />
+            <Text>{focusSubject}</Text> */}
+            <ButtonTest />
         </View>
     );
 }
@@ -17,7 +18,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightblue',
+        backgroundColor: 'white',
         paddingTop: 50
     }
 });
