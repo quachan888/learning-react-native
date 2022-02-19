@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
+import React, { useState } from 'react';
+import Focus from './src/features/focus/Focus';
+import TouchableTest from './src/LearningRN/TouchableTest';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    const [focusSubject, setFocusSubject] = useState('aaa');
+
+    return (
+        <View style={styles.container}>
+            {/* <Focus /> */}
+            <TouchableTest />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    container: {
+        flex: 1,
+        backgroundColor: 'lightblue',
+        paddingTop: 50
+    }
 });
